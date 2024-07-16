@@ -1,6 +1,13 @@
+import { useKeycloak } from "@react-keycloak/web"
+
 const App = () => {
+
+  const {keycloak} = useKeycloak()
+
   return (
-    <div>App</div>
+    <div>
+      <button onClick={() => keycloak.logout()}>Выйти</button>
+    </div>
   )
 }
 
